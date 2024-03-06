@@ -32,12 +32,14 @@ function Register() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            console.log('hit')
             console.log(formData);
             const result = await axios.post("/signup", formData)
             console.log(result);
-            tokenDispatch({ type: "SET_TOKEN", payload: result.data.token })
-            userDispatch({ type: "SET_USER", payload: result.data.user })
-            localStorage.setItem("jwt", JSON.stringify(result.data.token))
+            // tokenDispatch({ type: "SET_TOKEN", payload: result.data.token })
+            // userDispatch({ type: "SET_USER", payload: result.data.user })
+            // localStorage.setItem("jwt", JSON.stringify(result.data.token))
+            console.log("Sign Up Success!")
             
         } catch (error) {
             console.log(error);

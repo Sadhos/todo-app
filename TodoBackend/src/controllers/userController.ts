@@ -29,11 +29,11 @@ export async function signUp(req: Request, res: Response) {
         email,
         password: hashedPassword,
       });
-
-      const token = jwt.sign(newUser._id,JWT_TOKEN as string,{
-        expiresIn: 3 * 24 * 60 * 60
-      })
-      res.status(201).json({ message: 'User created successfully', user: newUser, token: token });
+      console.log(newUser._id);
+      const token = jwt.sign( { id: newUser._id },
+                JWT_TOKEN as string,
+                { expiresIn: 3 * 24 * 60 * 60 })
+      res.status(201).json({ message: 'User created successfully', user: newUser, token: token});
     } catch (error) {
       console.error('Error during sign-up:', error);
       res.status(500).json({ error: 'Internal Server Error' });
