@@ -29,8 +29,8 @@ export async function signUp(req: Request, res: Response) {
         email,
         password: hashedPassword,
       });
-      console.log(newUser._id);
-      const token = jwt.sign( { id: newUser._id },
+      
+      const token = await jwt.sign( { id: newUser._id },
                 JWT_TOKEN as string,
                 { expiresIn: 3 * 24 * 60 * 60 })
       res.status(201).json({ message: 'User created successfully', user: newUser, token: token});
