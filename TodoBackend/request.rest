@@ -37,7 +37,7 @@ GET http://localhost:8000/getTask
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YmEzY2ZiMWUwNmMwNzQ0MDNmNTg4NCIsImlhdCI6MTcwNjcwNTQ1NSwiZXhwIjoxNzA2OTY0NjU1fQ.SK3Z6QoOR0rITq5EICko97FOxPSurQNOSomvwlUpXF8
 
 ###
-POST https://todo-app-navy-two.vercel.app/signup
+POST https://todo-app-server-ecru-ten.vercel.app//signup
 Content-Type: application/json
 
 {
