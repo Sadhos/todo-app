@@ -31,3 +31,5 @@ app.use('/',taskRouter,userRouter,authRouter)
 app.listen(port, () => {
     console.log(`Server running on port http://localhost:${port}`)
 })
+
+export default app
