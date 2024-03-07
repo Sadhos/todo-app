@@ -26,7 +26,7 @@ function Header() {
                             <div className='flex items-center justify-center'>
                                  <p className='mr-5'>welcome, <span className=' text-xl text-blue-800 capitalize'>{user.name}</span></p>
                                 <button onClick={logout} className="logout mr-4">Logout</button> 
-                                <h1>welcome</h1>
+                               
                             </div>
                         ) : (
                             <ul className='flex justify-end gap-3 w-3/4 pr-6'>
